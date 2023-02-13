@@ -1,0 +1,129 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    font-size: 62.5%;
+
+    --font-app: 'Roboto', sans-serif;
+    --font-size: 2rem;
+
+    --color-bg: #222225;
+    --color-letter: #FFFFFF;
+    --font-predominant: #065E7C;
+}
+
+html{
+    background-color: var(--color-bg);
+}
+
+body * {
+    font-family: var(--font-app);
+    font-size: var(--font-size);
+    color: var(--color-letter);
+}
+
+.app{
+    max-width: 112rem;
+    margin: 11.5rem auto;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.search{
+    display: flex;
+    flex-direction: row;
+
+    
+}
+
+.search input{
+    width: 46.2rem;
+    margin-right: .8rem;
+    border-radius: .5rem;
+    padding: 1.6rem;
+    border: none;
+    background-color: #065e7c40;
+    color: var(--color-letter);
+    line-height: 1.6rem;
+}
+
+.search input::placeholder{
+    font-size: 16px;
+    color: #7C7C8A;
+}
+
+.search button{
+    background-color: var(--font-predominant);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .8rem;
+
+    border: none;
+    border-radius: .5rem;
+    cursor: pointer;
+
+    padding: 1.2rem 3.2rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 5rem;
+    text-align: left;
+    padding: 1.6rem 4rem;
+
+    border-radius: 1.2rem;
+    overflow: hidden;
+}
+
+table th, td{
+    padding: 1.6rem 4rem;
+} 
+
+table thead{
+    background-color: #074154;
+}
+
+tbody .user img {
+    width: 5.6rem;
+    height: 5.6rem;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+table .user{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    gap: 1.6rem ;
+}
+
+table .user p{
+    font-weight: 700;
+}
+
+table .user a{
+    font-weight: 400;
+    text-decoration: none;
+}
+
+table tbody td:nth-child(4){
+    color: #F75A68;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+table tbody tr:nth-child(odd){
+    background-color: #033e5220;
+}
+table tbody tr:nth-child(even){
+    background-color: #0443584f;
+}
