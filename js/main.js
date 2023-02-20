@@ -1,13 +1,5 @@
-//Criar um a tag tr por 
-function createRow(){
-    const tr = document.createElement('tr')
+import { FavoritesView } from "./Favorites.js";
 
-    const content = `
-    
-    
-    
-    `
+new FavoritesView('#app');
 
-}
 
-createRow();

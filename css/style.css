@@ -25,7 +25,11 @@ body * {
     color: var(--color-letter);
 }
 
-.app{
+body{
+    padding: 0 16rem;
+}
+
+#app{
     max-width: 112rem;
     margin: 11.5rem auto;
 }
@@ -73,23 +77,32 @@ header {
     padding: 1.2rem 3.2rem;
 }
 
+.table-wrapper{
+    margin-top: 8.7rem;
+    height: 50rem;
+    overflow: auto;
+    width: 100%;
+    position: sticky;
+    top: 15px;
+}
+
 table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 5rem;
     text-align: left;
     padding: 1.6rem 4rem;
 
     border-radius: 1.2rem;
-    overflow: hidden;
 }
 
 table th, td{
     padding: 1.6rem 4rem;
 } 
 
-table thead{
-    background-color: #074154;
+th{
+    position: sticky;
+    top: 0px;
+    background-color: #065E7C;
 }
 
 tbody .user img {
@@ -119,6 +132,20 @@ table tbody td:nth-child(4){
     color: #F75A68;
     font-weight: 700;
     cursor: pointer;
+}
+
+.remove{
+    border: none;
+    background-color: transparent;
+    color: #F75A68;
+    font-weight: 700;
+    transition: all .1s ease-in;
+}
+
+.remove:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+    color: #fc0d21;
 }
 
 table tbody tr:nth-child(odd){

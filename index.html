@@ -14,101 +14,31 @@
     <title>GitFav</title>
 </head>
 <body>
-    <div class="app">
+    <div id="app">
         <header>
             <img src="./assets/gitfav_icon.svg" alt="git fav icon">
             <div class="search">
-                <input id="input_username" type="text" value="" placeholder="Digite o Gihub username que quer favoritar">
+                <input id="input_username" type="text" placeholder="Digite o Github username que quer favoritar">
                 <button id="send_search">
                     <img src="./assets/star_icon.svg" alt="star icon">
                     FAVORITAR
                 </button>
             </div>
         </header>
-        <table>
-            <thead>
-                <tr>
-                    <th>Usuário</th>
-                    <th>Repositórios</th>
-                    <th>Followers</th>
-                    <th>Ação</th>
-                </tr>
-            </thead>
-            <tbody class="favorites">
-                <tr>
-                    <td class="user">
-                        <img src="https://avatars.githubusercontent.com/u/88464195?v=4" alt="imagem de ">
-                        <a href="https://api.github.com/users/jacksonMarcelinoFreitas" target="_blank">
-                            <p>Jackson Freitas</p>
-                            <span>/jacksonMarcelinoFreitas</span>
-                        </a>
-                    </td>
-                    <td>
-                        123
-                    </td>
-                    <td>
-                        1234
-                    </td>
-                    <td>
-                        Remover
-                    </td>
-                </tr>
-                <tr>
-                    <td class="user">
-                        <img src="https://avatars.githubusercontent.com/u/88464195?v=4" alt="imagem de ">
-                        <a href="https://api.github.com/users/jacksonMarcelinoFreitas" target="_blank">
-                            <p>Jackson Freitas</p>
-                            <span>/jacksonMarcelinoFreitas</span>
-                        </a>
-                    </td>
-                    <td>
-                        123
-                    </td>
-                    <td>
-                        1234
-                    </td>
-                    <td>
-                        Remover
-                    </td>
-                </tr>
-                <tr>
-                    <td class="user">
-                        <img src="https://avatars.githubusercontent.com/u/88464195?v=4" alt="imagem de ">
-                        <a href="https://api.github.com/users/jacksonMarcelinoFreitas" target="_blank">
-                            <p>Jackson Freitas</p>
-                            <span>/jacksonMarcelinoFreitas</span>
-                        </a>
-                    </td>
-                    <td>
-                        123
-                    </td>
-                    <td>
-                        1234
-                    </td>
-                    <td>
-                        Remover
-                    </td>
-                </tr>
-                <tr>
-                    <td class="user">
-                        <img src="https://avatars.githubusercontent.com/u/88464195?v=4" alt="imagem de ">
-                        <a href="https://api.github.com/users/jacksonMarcelinoFreitas" target="_blank">
-                            <p>Jackson Freitas</p>
-                            <span>/jacksonMarcelinoFreitas</span>
-                        </a>
-                    </td>
-                    <td>
-                        123
-                    </td>
-                    <td>
-                        1234
-                    </td>
-                    <td>
-                        Remover
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Usuário</th>
+                        <th>Repositórios</th>
+                        <th>Followers</th>
+                        <th>Ação</th>
+                    </tr>
+                </thead>
+                    <tbody>
+                    </tbody>
+            </table>
+        </div>
 
 
     </div>
