@@ -14,9 +14,9 @@ export class Favorites {
         localStorage.setItem('@github-favorites:', JSON.stringify(this.entries))
     }
 
-    verify(){
-        const tableFull= document.querySelector('.table-wrapper')
-        const tableEmpty= document.querySelector('.bgImagem')
+    verifyIfThereAreUser(){
+        const tableFull= document.querySelector('.table-wrapper-fav')
+        const tableEmpty= document.querySelector('.table-wrapper-no-fav')
 
         if(this.entries.length == 0){
             tableFull.classList.add('hidden')
@@ -45,7 +45,7 @@ export class Favorites {
             }
             this.entries = [user, ...this.entries]
             this.update()
-            this.verify();
+            this.verifyIfThereAreUser();
             this.save()
 
         } catch(error){
@@ -58,13 +58,10 @@ export class Favorites {
 
         this.entries = filteredEntries
         this.update()
-        this.verify();
+        this.verifyIfThereAreUser();
         this.save()
     }
 
-    // verifyIfNoUser(){
-        
-    // }
 }
 
 //Funçoes de mostragem dos dados
@@ -75,7 +72,7 @@ export class FavoritesView extends Favorites{
         this.tbody = this.root.querySelector('table tbody')
 
         this.update()
-        this.verify();
+        this.verifyIfThereAreUser();
         this.onAdd()
     }
 
@@ -111,7 +108,7 @@ export class FavoritesView extends Favorites{
                 const isOk = confirm("Tem certeza que deseja deletar esta linha?")
                 if(isOk){
                     this.delete(user)
-                    this.verify();
+                    this.verifyIfThereAreUser();
                 }
             }
         })

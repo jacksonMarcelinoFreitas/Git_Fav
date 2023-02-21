@@ -41,21 +41,22 @@ header {
 }
 
 .search{
+    width: 60%;
     display: flex;
     flex-direction: row;
-
-    
+    gap: .8rem;
 }
 
 .search input{
-    width: 46.2rem;
-    margin-right: .8rem;
-    border-radius: .5rem;
+    width: 100%;
     padding: 1.6rem;
+
+    line-height: 1.6rem;
+    border-radius: .5rem;
     border: none;
+
     background-color: #065e7c40;
     color: var(--color-letter);
-    line-height: 1.6rem;
 }
 
 .search input::placeholder{
@@ -65,6 +66,8 @@ header {
 
 .search button{
     background-color: var(--font-predominant);
+
+    width: 25%;
 
     display: flex;
     justify-content: center;
@@ -76,42 +79,41 @@ header {
     cursor: pointer;
 
     padding: 1.2rem 3.2rem;
+
+    font-size: clamp(1.4rem, 1rem + 1vw, .8rem);
 }
 
-.table-wrapper{
+.table-wrapper-fav{
     margin-top: 8.7rem;
-    overflow: auto;
     width: 100%;
+    height: 67.5rem;
+
+    overflow: auto;
+    
     overflow-y: scroll;
+
     border-radius: 1.2rem;
+    border: 1px solid #4A808C;
 }
 
 table {
     width: 100%;
-    height: 500px;
+
     border-collapse: collapse;
-
-    text-align: left;
-    padding: 1.6rem 4rem;
-
     border-radius: 1.2rem;
+
+    padding: 1.6rem 4rem;
+    text-align: left;
 }
 
 table th, td{
     padding: 1.6rem 4rem;
 } 
 
-th{
+table th{
     position: sticky;
     top: 0px;
-    background-color: #065E7C;
-}
-
-tbody .user img {
-    width: 5.6rem;
-    height: 5.6rem;
-    border-radius: 50%;
-    overflow: hidden;
+    background-color: #0d3a47;
 }
 
 table .user{
@@ -119,6 +121,17 @@ table .user{
     align-items: center;
     justify-content: left;
     gap: 1.6rem ;
+}
+
+tbody .user img{
+    width: 5.6rem;
+    height: 5.6rem;
+
+    border-radius: 50%;
+
+    overflow: hidden;
+
+    border: 1px solid #72bbcc;
 }
 
 table .user p{
@@ -138,9 +151,12 @@ table tbody td:nth-child(4){
 
 .remove{
     border: none;
+
     background-color: transparent;
     color: #F75A68;
+    
     font-weight: 700;
+
     transition: all .1s ease-in;
 }
 
@@ -148,6 +164,10 @@ table tbody td:nth-child(4){
     cursor: pointer;
     transform: scale(1.1);
     color: #fc0d21;
+}
+
+table tbody tr{
+    border-bottom: 1px solid #4A808C;
 }
 
 table tbody tr:nth-child(odd){
@@ -158,45 +178,36 @@ table tbody tr:nth-child(even){
 }
 
 
-.table-wrapper::-webkit-scrollbar {
+.table-wrapper-fav::-webkit-scrollbar {
     width: .9rem;
     background: transparent;
 }
-.table-wrapper::-webkit-scrollbar-thumb {
+.table-wrapper-fav::-webkit-scrollbar-thumb {
     background: #4A808C;
     border-radius: 10px;
 }
 
-.table-wrapper::-webkit-scrollbar-track{
-    height: 70px;
-    background-color: transparent;
-}
-
-.table-wrapper::-webkit-scrollbar-track-piece{
-    background-color: transparent;
-}
-
-.hidden{
-    display: none;
-}
-
-.bgImagem{
-    border-radius: 1.2rem;
-    overflow: hidden;
-}
-
-.bgImagem table{
-    border-radius: 1.2rem 1.2rem 0 0 ;
+.table-wrapper-no-fav{
     margin-top: 8.7rem;
-    height: 20px;
+    width: 100%;
+    height: 67.5rem;
+
     overflow: hidden;
+    
+    border-radius: 1.2rem;
+    border: 1px solid #4A808C;
 }
 
-.vazio{
-    background-color: #7c7c8a1c;
-    height: 624px;
-    width: 100%;
+.table-wrapper-no-fav thead th{
+    position: sticky;
+    top: 0px;
+    background-color: #0d3a47;
+}
 
+.no-fav{
+    background-color: #5a5a6415;
+    height: 100%;
+    width: 100%;
 
     display: flex;
     align-items: center;
@@ -204,9 +215,13 @@ table tbody tr:nth-child(even){
     gap: 6rem;
 }
 
-.vazio p{
+.no-fav p{
     font-family: var(--font-secundary);
     font-size: 4rem;
     color:  #4E5455;;
+}
+
+.hidden{
+    display: none;
 }
 
