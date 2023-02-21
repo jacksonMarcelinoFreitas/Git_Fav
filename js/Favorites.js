@@ -7,27 +7,35 @@ export class Favorites {
     }
 
     load(){
-        this.entries = JSON.parse(localStorage.getItem('@github-favorites')) || []
+        this.entries = JSON.parse(localStorage.getItem('@github-favorites:')) || []
     }
 
     save(){
-        localStorage.setItem('@github-favorites', JSON.stringify(this.entries))
+        localStorage.setItem('@github-favorites:', JSON.stringify(this.entries))
     }
 
-    delete(user){
-        const filteredEntries = this.entries.filter(entry => entry.login !== user.login)
+    verify(){
+        const tableFull= document.querySelector('.table-wrapper')
+        const tableEmpty= document.querySelector('.bgImagem')
 
-        this.entries = filteredEntries
-        this.update()
-        this.save()
+        if(this.entries.length == 0){
+            tableFull.classList.add('hidden')
+            tableEmpty.classList.remove('hidden')
+
+        }else{
+            console.log('Há user!')
+            tableFull.classList.remove('hidden')
+            tableEmpty.classList.add ('hidden')
+        }
     }
 
     async add(username){
+        try {
 
-        try{
             const userExists = this.entries.find(entry => entry.login === username)
+
             if(userExists){
-                throw new Error('Usuário já existe!')
+                throw new Error('Usuário já cadastrado')
             }
 
             const user = await GithubUser.search(username)
@@ -35,14 +43,28 @@ export class Favorites {
             if (user.login === undefined){
                 throw new Error('Usuário não encontrado!')
             }
-
             this.entries = [user, ...this.entries]
             this.update()
+            this.verify();
             this.save()
-        }catch(error){
+
+        } catch(error){
             alert(error.message)
         }
     }
+
+    delete(user){
+        const filteredEntries = this.entries.filter(entry => entry.login !== user.login)
+
+        this.entries = filteredEntries
+        this.update()
+        this.verify();
+        this.save()
+    }
+
+    // verifyIfNoUser(){
+        
+    // }
 }
 
 //Funçoes de mostragem dos dados
@@ -53,6 +75,7 @@ export class FavoritesView extends Favorites{
         this.tbody = this.root.querySelector('table tbody')
 
         this.update()
+        this.verify();
         this.onAdd()
     }
 
@@ -88,6 +111,7 @@ export class FavoritesView extends Favorites{
                 const isOk = confirm("Tem certeza que deseja deletar esta linha?")
                 if(isOk){
                     this.delete(user)
+                    this.verify();
                 }
             }
         })
@@ -128,7 +152,9 @@ export class FavoritesView extends Favorites{
 
     removeAllTr(){
         this.tbody.querySelectorAll('tr').forEach((tr) => {
-            tr.remove
+            tr.remove()
         });
     }
+
+    
 }

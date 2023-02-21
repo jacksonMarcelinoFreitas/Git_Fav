@@ -8,6 +8,7 @@
     font-size: 62.5%;
 
     --font-app: 'Roboto', sans-serif;
+    --font-secundary: 'Roboto Mono', monospace;
     --font-size: 2rem;
 
     --color-bg: #222225;
@@ -79,16 +80,17 @@ header {
 
 .table-wrapper{
     margin-top: 8.7rem;
-    height: 50rem;
     overflow: auto;
     width: 100%;
-    position: sticky;
-    top: 15px;
+    overflow-y: scroll;
+    border-radius: 1.2rem;
 }
 
 table {
     width: 100%;
+    height: 500px;
     border-collapse: collapse;
+
     text-align: left;
     padding: 1.6rem 4rem;
 
@@ -154,3 +156,57 @@ table tbody tr:nth-child(odd){
 table tbody tr:nth-child(even){
     background-color: #0443584f;
 }
+
+
+.table-wrapper::-webkit-scrollbar {
+    width: .9rem;
+    background: transparent;
+}
+.table-wrapper::-webkit-scrollbar-thumb {
+    background: #4A808C;
+    border-radius: 10px;
+}
+
+.table-wrapper::-webkit-scrollbar-track{
+    height: 70px;
+    background-color: transparent;
+}
+
+.table-wrapper::-webkit-scrollbar-track-piece{
+    background-color: transparent;
+}
+
+.hidden{
+    display: none;
+}
+
+.bgImagem{
+    border-radius: 1.2rem;
+    overflow: hidden;
+}
+
+.bgImagem table{
+    border-radius: 1.2rem 1.2rem 0 0 ;
+    margin-top: 8.7rem;
+    height: 20px;
+    overflow: hidden;
+}
+
+.vazio{
+    background-color: #7c7c8a1c;
+    height: 624px;
+    width: 100%;
+
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6rem;
+}
+
+.vazio p{
+    font-family: var(--font-secundary);
+    font-size: 4rem;
+    color:  #4E5455;;
+}
+
