@@ -5,7 +5,7 @@
     <span>favorite the profile you like</span>
 </p>
 
-<p style="align: center">
+<p align="center">
     <a href="https://jacksonmarcelinofreitas.github.io/Git_Fav/">
         <img width="150px" src="https://github.com/jacksonMarcelinoFreitas/Focus_Timer_Challenge/blob/master/assets/button_to_see.png" alt="Button to see the project">    
     </a>
@@ -17,11 +17,8 @@
 
 ### Resources Used
 🔸JavaScript 
-
 🔸Html
-
 🔸CSS
-
 🔸API GitHub
 
 <div class="container" align="center">
