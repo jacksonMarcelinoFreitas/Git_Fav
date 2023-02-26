@@ -26,7 +26,7 @@
 
 <div class="container" align="center">
     <a href="https://github.com/jacksonMarcelinoFreitas" style="display: inline_block">
-        <img width="45px" src="./assets/Perfil Readme.png" alt="imagem de Jackson Freitas">
+        <img width="45px" src="https://github.com/jacksonMarcelinoFreitas/CRUD_PHP/raw/master/assets/Perfil%20Readme.png" alt="imagem de Jackson Freitas">
         <p>By Jackson Freitas</p>
     </a>
 </div>
